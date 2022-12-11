@@ -1,21 +1,13 @@
 .benefits {
-    padding-top: 94px;
-}
-
-.benefits__list {
+    padding: 94px 0;
+    &__list {
     display: flex;
-    flex-wrap: wrap;
-}
-
-.peculiarities__item {
+    gap: 30px;
+    }
+    &__item {
     width: 270px;
-}
-
-.peculiarities.list .peculiarities__item+.peculiarities__item {
-    margin-left: 30px;
-}
-
-.icon-box {
+    }
+    &__image {
     @extend %link;
     content: "";
     height: 120px;
@@ -23,18 +15,17 @@
     margin-bottom: 30px;
     background-size: contain;
     background: $button-color;
-    
     justify-content: center;
-}
-.feature__sub-title {
+    }
+    &__title {
     margin-top: 0;
     margin-bottom: 10px;
     @include font (null, 14px, 1.14, null);
-    
     text-transform: uppercase;
-}
-.feature__text {
+    }
+    &__text {
     margin-top: 0;
     font-size: 14px;
     line-height: 1.71;
+    }
 }
