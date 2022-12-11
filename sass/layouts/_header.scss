@@ -1,0 +1,94 @@
+.header {
+    border: 1px solid #ECECEC;
+}
+.logo {
+    margin-right: 93px;
+    @include font (null, 26px, 1.19, null);
+    color: $accent-color;
+    text-decoration: none;
+}
+
+.logo__header {
+    color: black;
+}
+.main-nav {
+@extend %list;
+}
+.site-nav {
+display: flex;
+}
+.site-nav__item:not(:last-child) {
+margin-right: 50px;
+}
+
+.site-nav__link {
+position: relative;
+display: block;
+padding-top: 32px;
+padding-bottom: 32px;
+color: $primary-text-color;
+font-family: 'Roboto';
+@include font (500, 14px, 1.14, 0.02);
+text-decoration: none;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
+}
+.site-nav__link.current {
+color: $accent-color;
+padding: 32px 0px;
+    &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+    }
+}
+.header__contact {
+    display: flex;
+    margin-left: auto;
+}
+
+.header__item {
+    @extend %link;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $p-text-color;
+    @include font (500, 14px, 1.14, 0.02);
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .header__email:hover &,
+    .header__tel:hover &,
+    .header__item:focus & {
+        color: $accent-color;
+        fill: $accent-color;
+    }
+    .header__contact &+& {
+        margin-left: 50px;
+    }
+}
+.header__icon {
+    margin-right: 10px;
+    fill: $p-text-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .header__email:hover &,
+    .header__tel:hover &,
+    .header__item:focus & {
+        color: $accent-color;
+        fill: $accent-color;
+    }
+}
+
+.header__email,
+.header__tel {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    fill: $p-text-color;
+}

@@ -1,0 +1,30 @@
+.hero-title {
+    margin-bottom: 30px;
+    @include font (900, 44px, 1.36, 0.06);
+    text-transform: uppercase;
+    color: $white-color;
+}
+.section-title {
+    @include font (null,36px, 1.17, null);
+    text-align: center;
+}
+.team__title {
+    margin-bottom: 50px;
+}
+.section-title {
+    margin-bottom: 50px;
+    padding-top: 94px;
+}
+.project-title {
+    margin-bottom: 4px;
+    @include font (null, 18px, null, 0.06);
+    line-height: 2;
+}
+.social-title {
+    font-family: inherit;
+    font-style: normal;
+    @include font (700, 14px, 1.14, 0.03);
+    text-transform: uppercase;
+    color: $white-color;
+    margin-bottom: 20px;
+}

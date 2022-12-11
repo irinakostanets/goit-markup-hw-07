@@ -1,0 +1,40 @@
+.section {
+    padding-top: 94px;
+}
+
+.peculiarities.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.peculiarities__item {
+    width: 270px;
+}
+
+.peculiarities.list .peculiarities__item+.peculiarities__item {
+    margin-left: 30px;
+}
+
+.icon-box {
+    @extend %link;
+    content: "";
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-size: contain;
+    background: $button-color;
+    
+    justify-content: center;
+}
+.feature__sub-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    @include font (null, 14px, 1.14, null);
+    
+    text-transform: uppercase;
+}
+.feature__text {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 1.71;
+}
