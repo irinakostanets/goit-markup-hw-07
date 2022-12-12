@@ -1,13 +1,13 @@
 .team {
-    background-color: $light-backgroud-color;
-}
-
-.team__list {
-    display: flex;
-}
-
-.team__list .team__member+.team__member {
-    margin-left: 30px;
+    background-color: $button-color;
+    &__title {
+        margin-bottom: 50px;
+        @include font (null,36px, 1.17, null);
+        text-align: center;
+    }
+    &__list {
+        display: flex;
+    }
 }
 
 .team__member {
@@ -28,6 +28,10 @@
         text-align: center;
         margin-bottom: 16px;
     }
+    
+    .team__list &+& {
+    margin-left: 30px;
+}
 }
 .member__list {
     display: flex;
